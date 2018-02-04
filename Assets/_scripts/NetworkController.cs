@@ -51,7 +51,7 @@ public class NetworkController : NetworkBehaviour {
 		
 	}
 
-    void confirmed ()
+    void confirmed()
     {
         Debug.Log("entered");
         CmdDoMe();
