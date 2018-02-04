@@ -449,8 +449,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerColor: {r: 0, g: 0, b: 0, a: 0}
-  PlayerScore: {fileID: 0}
-  ColorLeftText: {fileID: 0}
+  PlayerScore: {fileID: 2121014151}
+  ColorLeftText: {fileID: 963484209}
 --- !u!1 &691434751
 GameObject:
   m_ObjectHideFlags: 0

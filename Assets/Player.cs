@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
     private int totalPlayers;
     public Text PlayerScore;
     public Text ColorLeftText;
+    bool updateOnce = true;
 
 
 	// Use this for initialization
@@ -28,15 +29,17 @@ public class Player : MonoBehaviour {
         totalPlayers = allVariables.getTotalPlayerCount();
         totalBetAmount = totalPlayers * 2;
         PlayerScore = GetComponent<Text>();
-        //PlayerScore.text = "Score: 0";
+        PlayerScore.text = "Score: 0";
         ColorLeftText = GetComponent<Text>();
-        //ColorLeftText.text = "Color Left: 0";
+        ColorLeftText.text = "Color Left: " + totalBetAmount.ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        ColorLeftText.text = "Color Left: " + totalBetAmount.ToString();
+        PlayerScore.text = "Score: " + currentScore.ToString();
+
+    }
 
     public int getColorLeft()
     {
@@ -84,6 +87,7 @@ public class Player : MonoBehaviour {
     public void setTextColor(string givenString)
     {
         ColorLeftText.text = givenString;
+        //transform.Find("ColorLeft").GetComponent<Text>().text = givenString;
     }
 
     public void setTotalBetAmount(int newBetAmount)

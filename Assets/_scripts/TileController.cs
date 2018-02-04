@@ -9,6 +9,7 @@ public class TileController : MonoBehaviour
     private Color defaultColor = Color.white;
     public ColorBlock playerBlockColor = new ColorBlock();
     public int myID;
+    public GameObject pParent;
 
     public Button yourButton;
     // Use this for initialization
@@ -22,23 +23,26 @@ public class TileController : MonoBehaviour
 
     void clickF()
     {
+        //Debug.Log(transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount().ToString());
         //GetComponent<Button>().colors = playerBlockColor; // = playerColor;
-        Debug.Log("Clicked");
+        //Debug.Log("Clicked");
         if (GetComponent<Image>().color != playerColor) {
-            Debug.Log(GetComponent<Player>().getTotalBetAmount());
-            if (transform.Find("PlayerStuff").GetComponent<Player>().getTotalBetAmount() > 0)//GetComponentInParent<Player>().getTotalBetAmount() > 0)
+            //Debug.Log("lol");
+            if (transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount() > 0)//GetComponentInParent<Player>().getTotalBetAmount() > 0)
             {
-                Debug.Log("Went in here");
+                //Debug.Log("Went in here");
                 GetComponent<Image>().color = playerColor;
-                GetComponent<Gameboard>().addToSet(myID);
-                GetComponent<Player>().setTextColor("Color Left: " + (GetComponent<Player>().getTotalBetAmount()-1).ToString());
-                GetComponent<Player>().setTotalBetAmount(GetComponent<Player>().getTotalBetAmount() - 1);
-                GetComponent<Player>().setText("Score: " + GetComponent<Player>().getCurrentScore().ToString());
+                GetComponentInParent<Gameboard>().addToSet(myID);
+                transform.parent.transform.parent.GetComponent<Player>().setTextColor("Color Left: " + (transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount()-1).ToString());
+                transform.parent.transform.parent.GetComponent<Player>().setTotalBetAmount(transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount() - 1);
+                //transform.parent.transform.parent.GetComponent<Player>().setText("Score: " + transform.parent.transform.parent.GetComponent<Player>().ToString());
             }
         }
         else {
             GetComponent<Image>().color = defaultColor;
             GetComponentInParent<Gameboard>().removeFromSet(myID);
+            transform.parent.transform.parent.GetComponent<Player>().setTextColor("Color Left: " + (transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount() + 1).ToString());
+            transform.parent.transform.parent.GetComponent<Player>().setTotalBetAmount(transform.parent.transform.parent.GetComponent<Player>().getTotalBetAmount() + 1);
         }
     }
 

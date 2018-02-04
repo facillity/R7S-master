@@ -261,6 +261,7 @@ namespace Prototype.NetworkLobby
         public void OnPlayersNumberModified(int count)
         {
             _playerNumber += count;
+            allVariables.setTotalPlayerCount(_playerNumber);
 
             int localPlayerCount = 0;
             foreach (PlayerController p in ClientScene.localPlayers)
@@ -275,6 +276,10 @@ namespace Prototype.NetworkLobby
         //But OnLobbyClientConnect isn't called on hosting player. So we override the lobbyPlayer creation
         public override GameObject OnLobbyServerCreateLobbyPlayer(NetworkConnection conn, short playerControllerId)
         {
+            if (playerControllerId == 0)
+            {
+                return null;
+            }
             GameObject obj = Instantiate(lobbyPlayerPrefab.gameObject) as GameObject;
 
             LobbyPlayer newPlayer = obj.GetComponent<LobbyPlayer>();
