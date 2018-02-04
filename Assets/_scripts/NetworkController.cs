@@ -8,7 +8,7 @@ public class NetworkController : NetworkBehaviour {
     public Button btn;
     // Use this for initialization
 
-    public delegate void SendUpdateDelegate(Color color, HashSet<int> locs);
+    public delegate void SendUpdateDelegate(Color color, int[] locs);
 
     [SyncEvent]
     public event SendUpdateDelegate EventSendUpdate;
@@ -16,7 +16,8 @@ public class NetworkController : NetworkBehaviour {
     [Command]
     public void CmdDoMe()
     {
-        EventSendUpdate(allVariables.getPlayerColor(), gameObject.GetComponent<Gameboard>().numset);
+        List<int> ns = gameObject.GetComponent<Gameboard>().numset;
+        EventSendUpdate(allVariables.getPlayerColor(), ns.ToArray());
     }
 
     [SyncVar]
@@ -33,7 +34,7 @@ public class NetworkController : NetworkBehaviour {
         //myID = GetComponent<Gameboard>().getID();
     }
 
-    public void SendUpdate(Color color, HashSet<int> locs)
+    public void SendUpdate(Color color, int[] locs)
     {
         ct += 1;
         confirms.Add(color, locs);

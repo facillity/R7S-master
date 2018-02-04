@@ -10,7 +10,7 @@ public class Gameboard : MonoBehaviour {
     public Button prefab;
     private Button button;
     public int ID;
-    public HashSet<int> numset = new HashSet<int>();
+    public List<int> numset = new List<int>();
     public void Start()
     {
         int playerNum = 5;
