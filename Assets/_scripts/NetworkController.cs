@@ -37,6 +37,10 @@ public class NetworkController : NetworkBehaviour {
     {
         ct += 1;
         confirms.Add(color, locs);
+        if (ct == allVariables.getTotalPlayerCount())
+        {
+            Debug.Log("YEABOIIIIII");
+        }
     }
 
     // Update is called once per frame
