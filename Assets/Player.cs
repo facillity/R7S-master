@@ -28,9 +28,9 @@ public class Player : MonoBehaviour {
         playerColor = allVariables.getPlayerColor();
         totalPlayers = allVariables.getTotalPlayerCount();
         totalBetAmount = totalPlayers * 2;
-        PlayerScore = GetComponent<Text>();
+        //PlayerScore = GetComponent<Text>();
         PlayerScore.text = "Score: 0";
-        ColorLeftText = GetComponent<Text>();
+        //ColorLeftText = GetComponent<Text>();
         ColorLeftText.text = "Color Left: " + totalBetAmount.ToString();
 	}
 	

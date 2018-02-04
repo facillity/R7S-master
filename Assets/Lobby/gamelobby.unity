@@ -296,7 +296,7 @@ Prefab:
     - target: {fileID: 11475086, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 2}
       propertyPath: m_GamePlayerPrefab
       value: 
-      objectReference: {fileID: 1845772663179636, guid: ea59b0efcba2bdb41a4d001f07cbbe46,
+      objectReference: {fileID: 1506074631630748, guid: b503f43840560a94a89950a8bf40a928,
         type: 2}
     - target: {fileID: 11475086, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 2}
       propertyPath: m_MinPlayers
