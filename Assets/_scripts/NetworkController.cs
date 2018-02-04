@@ -53,6 +53,7 @@ public class NetworkController : NetworkBehaviour {
 
     void confirmed ()
     {
+        Debug.Log("entered");
         CmdDoMe();
     }
 }
