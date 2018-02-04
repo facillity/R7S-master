@@ -23,9 +23,18 @@ public class TileController : MonoBehaviour
     void clickF()
     {
         //GetComponent<Button>().colors = playerBlockColor; // = playerColor;
+        Debug.Log("Clicked");
         if (GetComponent<Image>().color != playerColor) {
-            GetComponent<Image>().color = playerColor;
-            GetComponentInParent<Gameboard>().addToSet(myID);
+            Debug.Log(GetComponent<Player>().getTotalBetAmount());
+            if (transform.Find("PlayerStuff").GetComponent<Player>().getTotalBetAmount() > 0)//GetComponentInParent<Player>().getTotalBetAmount() > 0)
+            {
+                Debug.Log("Went in here");
+                GetComponent<Image>().color = playerColor;
+                GetComponent<Gameboard>().addToSet(myID);
+                GetComponent<Player>().setTextColor("Color Left: " + (GetComponent<Player>().getTotalBetAmount()-1).ToString());
+                GetComponent<Player>().setTotalBetAmount(GetComponent<Player>().getTotalBetAmount() - 1);
+                GetComponent<Player>().setText("Score: " + GetComponent<Player>().getCurrentScore().ToString());
+            }
         }
         else {
             GetComponent<Image>().color = defaultColor;
