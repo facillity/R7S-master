@@ -25,7 +25,7 @@ public class TileController : MonoBehaviour
         //GetComponent<Button>().colors = playerBlockColor; // = playerColor;
         Debug.Log("Clicked");
         if (GetComponent<Image>().color != playerColor) {
-            Debug.Log(GetComponent<Player>().getTotalBetAmount());
+            Debug.Log(GameObject.Find("PlayerStuff").GetComponent<Player>().getTotalBetAmount());
             if (transform.Find("PlayerStuff").GetComponent<Player>().getTotalBetAmount() > 0)//GetComponentInParent<Player>().getTotalBetAmount() > 0)
             {
                 Debug.Log("Went in here");
