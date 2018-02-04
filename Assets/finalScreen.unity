@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 312549215}
   - component: {fileID: 312549214}
   - component: {fileID: 312549213}
+  - component: {fileID: 312549217}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -268,6 +269,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &312549217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312549212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a5f78b1ece28e409b80a40fb58983c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 0}
 --- !u!1 &398001089
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +501,7 @@ GameObject:
   - component: {fileID: 1188730601}
   - component: {fileID: 1188730600}
   - component: {fileID: 1188730599}
+  - component: {fileID: 1188730602}
   m_Layer: 5
   m_Name: PlayAgain
   m_TagString: Untagged
@@ -553,15 +567,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 312549212}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 312549217}
+        m_MethodName: changeMenuScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: gamelobby
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -599,6 +613,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1188730597}
+--- !u!114 &1188730602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1188730597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a5f78b1ece28e409b80a40fb58983c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 1927057255}
 --- !u!1 &1357614844
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +636,7 @@ GameObject:
   - component: {fileID: 1357614847}
   - component: {fileID: 1357614846}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +710,7 @@ GameObject:
   - component: {fileID: 1462867301}
   - component: {fileID: 1462867300}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: Won
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,7 +878,7 @@ GameObject:
   - component: {fileID: 1927057256}
   - component: {fileID: 1927057255}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: Winner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
