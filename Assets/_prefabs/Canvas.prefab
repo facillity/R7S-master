@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 114855589158913920, guid: c9c2beeb84c9d6f4d9e2fa17bf2718ad, type: 2}
   ID: 0
+  numset: 
 --- !u!114 &114217961983306342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,7 +464,7 @@ MonoBehaviour:
     i14: 169
     i15: 40
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114623712253935506
 MonoBehaviour:
   m_ObjectHideFlags: 1

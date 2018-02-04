@@ -38,9 +38,11 @@ public class NetworkController : NetworkBehaviour {
     {
         ct += 1;
         confirms.Add(color, locs);
+        Debug.Log("hello");
         if (ct == allVariables.getTotalPlayerCount())
         {
             Debug.Log("YEABOIIIIII");
+            allVariables.setCurrentScore(5);
         }
     }
 

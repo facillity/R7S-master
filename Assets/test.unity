@@ -291,6 +291,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114509876147782360, guid: b503f43840560a94a89950a8bf40a928,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b503f43840560a94a89950a8bf40a928, type: 2}
   m_IsPrefabParent: 0
@@ -415,4 +420,4 @@ MonoBehaviour:
     i14: 169
     i15: 40
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1

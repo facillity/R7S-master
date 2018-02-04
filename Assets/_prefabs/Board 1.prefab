@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  PlayerScore: {fileID: 0}
+  ColorLeftText: {fileID: 0}
 --- !u!114 &114801107271676012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 114855589158913920, guid: c9c2beeb84c9d6f4d9e2fa17bf2718ad, type: 2}
   ID: 0
+  numset: 
 --- !u!114 &114849005841554486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,7 +163,7 @@ MonoBehaviour:
     i14: 30
     i15: 119
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!222 &222082080037069972
 CanvasRenderer:
   m_ObjectHideFlags: 1
